@@ -14,7 +14,6 @@ use Tests\TestCase;
 class PhotoSubmitApiTest extends TestCase
 {
     use RefreshDatabase;
-
     public function setUp(): void
     {
         parent::setUp();
@@ -43,7 +42,7 @@ class PhotoSubmitApiTest extends TestCase
         $photo = Photo::first();
 
         // 写真のIDが12桁のランダムな文字列であること
-        $this->assertRegExp('/^[0-9a-zA-Z-_]{12}$/', $photo->id);
+        $this->assertMatchesRegularExpression('/^[0-9a-zA-Z-_]{12}$/', $photo->id);
 
         // DBに挿入されたファイル名のファイルがストレージに保存されていること
         Storage::cloud()->assertExists($photo->filename);
