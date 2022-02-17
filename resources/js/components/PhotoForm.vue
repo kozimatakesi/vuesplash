@@ -31,13 +31,13 @@ export default {
     onFileChange (event) {
       // 何も選択されていなかったら処理中断
       if (event.target.files.length === 0) {
-        this.reset() // ★ 追加
+        this.reset()
         return false
       }
 
       // ファイルが画像ではなかったら処理中断
       if (! event.target.files[0].type.match('image.*')) {
-        this.reset() // ★ 追加
+        this.reset()
         return false
       }
 

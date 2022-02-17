@@ -2137,15 +2137,13 @@ __webpack_require__.r(__webpack_exports__);
 
       // 何も選択されていなかったら処理中断
       if (event.target.files.length === 0) {
-        this.reset(); // ★ 追加
-
+        this.reset();
         return false;
       } // ファイルが画像ではなかったら処理中断
 
 
       if (!event.target.files[0].type.match('image.*')) {
-        this.reset(); // ★ 追加
-
+        this.reset();
         return false;
       } // FileReaderクラスのインスタンスを取得
 
