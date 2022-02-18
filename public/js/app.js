@@ -3801,7 +3801,7 @@ var render = function () {
       { staticClass: "loading__text" },
       [
         _vm._t("default", function () {
-          return [_vm._v("Loading...")]
+          return [_vm._v("ロード中...")]
         }),
       ],
       2
