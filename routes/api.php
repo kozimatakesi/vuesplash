@@ -25,6 +25,13 @@ Route::get('/photos/{id}', 'PhotoController@show')->name('photo.show');
 Route::get('/photos', 'PhotoController@index')->name('photo.index');
 // コメント
 Route::post('/photos/{photo}/comments', 'PhotoController@addComment')->name('photo.comment');
+// いいね
+Route::put('/photos/{id}/like', 'PhotoController@like')->name('photo.like');
+
+// いいね解除
+Route::delete('/photos/{id}/like', 'PhotoController@unlike');
+
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
