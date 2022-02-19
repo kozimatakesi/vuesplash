@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Storage;
 
 class Photo extends Model
 {
+    // ページネーションする1ページ分の最大個数デフォルト15
+    //protected $perPage = 2;
+
     /** プライマリキーの型 */
     protected $keyType = 'string';
 
