@@ -19,7 +19,8 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/user', fn() => Auth::user())->name('user');
 // 写真投稿
 Route::post('/photos', 'PhotoController@create')->name('photo.create');
-
+// 写真一覧
+Route::get('/photos', 'PhotoController@index')->name('photo.index');
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
