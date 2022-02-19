@@ -23,6 +23,8 @@ Route::post('/photos', 'PhotoController@create')->name('photo.create');
 Route::get('/photos/{id}', 'PhotoController@show')->name('photo.show');
 // 写真一覧
 Route::get('/photos', 'PhotoController@index')->name('photo.index');
+// コメント
+Route::post('/photos/{photo}/comments', 'PhotoController@addComment')->name('photo.comment');
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
