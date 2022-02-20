@@ -23193,6 +23193,7 @@ var routes = [{
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
+  // 上下の位置を保持するやつ
   scrollBehavior: function scrollBehavior() {
     return {
       x: 0,
