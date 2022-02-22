@@ -21,7 +21,7 @@ Route::get('/user', fn() => Auth::user())->name('user');
 Route::post('/photos', 'PhotoController@create')->name('photo.create');
 // 写真詳細
 Route::get('/photos/{id}', 'PhotoController@show')->name('photo.show');
-// 写真一覧
+// 写真一覧あああ
 Route::get('/photos', 'PhotoController@index')->name('photo.index');
 // コメント
 Route::post('/photos/{photo}/comments', 'PhotoController@addComment')->name('photo.comment');
